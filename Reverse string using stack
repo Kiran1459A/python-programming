@@ -1,0 +1,15 @@
+import collections
+str = "GeeksQuiz"
+stack=collections.deque()
+stack1=[]
+stack+=str
+
+
+for i in range(len(str)):
+    a=stack.pop()
+    stack1.append(a)
+    
+   
+    
+print("".join(stack1))
+    
