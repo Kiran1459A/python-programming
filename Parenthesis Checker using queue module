@@ -1,0 +1,26 @@
+import queue
+stack=queue.LifoQueue()
+exp = "[()]{}{[()()]()}"
+for i in exp:
+    if i in "[{(":
+        stack.put(i)
+    else:
+        if stack.empty():
+            print(False)
+            break
+        cc=stack.get()
+        if cc=="(":
+            if i!=")":
+                print(False)
+                break
+        if cc=="{":
+            if i!="}":
+                print(False)
+                break
+        if cc=="[":
+            if i!="]":
+                print(False)
+                break
+if stack.empty():
+    print(True)
+
